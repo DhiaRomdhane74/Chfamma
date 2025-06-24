@@ -1,0 +1,59 @@
+.prayers-section {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  height: 100vh;
+  background: #e8e8e8;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+.prayers-map {
+  flex: 1.2;
+  border-radius: 16px;
+  height: 100%;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+.prayers-table {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: 80vh;
+}
+.table-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0;
+}
+.prayers-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  table-layout: fixed;
+}
+.prayers-table th,
+.prayers-table td {
+  padding: 0.7rem 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1.05rem;
+}
+.prayers-table th {
+  font-weight: bold;
+  background: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.prayers-table tr:last-child td {
+  border-bottom: none;
+}

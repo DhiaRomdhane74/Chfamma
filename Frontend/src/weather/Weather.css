@@ -1,0 +1,81 @@
+/* src/weather/Weather.css */
+
+.weather-section {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  height: 100vh;             /* Only this should have 100vh */
+  background: #e8e8e8;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+
+.weather-map {
+  flex: 1.2;
+  border-radius: 16px;
+  height: 100%;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.weather-table {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  min-width: 350px;
+  height: 90%;           /* Only percentage! */
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.weather-table h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  
+}
+
+.table-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0;  /* fixes flexbox overflow */
+}
+
+
+
+.weather-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  table-layout: fixed;   /* Helps columns align with sticky headers */
+  
+}
+
+.weather-table th,
+.weather-table td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1.05rem;
+}
+
+.weather-table th {
+  font-weight: bold;
+  background: #f8f8f8;
+  position: sticky;    /* Fixed header */
+  top: 0;
+  z-index: 2;
+  height: 20px;
+}
+
+.weather-table tr:last-child td {
+  border-bottom: none;
+}

@@ -1,0 +1,97 @@
+.sports-section {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  height: 100vh;
+  background: #e8e8e8;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.sports-map {
+  flex: 1.2;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sports-table {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: 80vh;
+
+}
+
+.sports-table h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.table-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.sports-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 16px;
+  background: #fff;
+  table-layout: fixed;
+  transition: background 0.3s;
+}
+
+/* Card style for each row */
+.sports-table tbody tr {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+
+.sports-table tbody tr:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
+/* Remove row border for a cleaner gap look */
+.sports-table th,
+.sports-table td {
+  padding: 0.8rem 0.8rem;
+  border-bottom: none;
+  font-size: 1.08rem;
+  text-align: left;
+}
+
+.sports-table th {
+  font-weight: bold;
+  background: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 20px;
+}
+
+/* Only keep this if you want the entire "match" row centered */
+.sports-table td[colspan="4"] {
+  text-align: center !important;
+}
+
+.round-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem; /* add some space below if needed */
+}
