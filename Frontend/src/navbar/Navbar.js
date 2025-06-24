@@ -13,7 +13,7 @@ function Navbar() {
           <Link to="/">Weather</Link>
         </li>
         <li className={location.pathname === '/sports' ? 'active' : ''}>
-          <Link to="/sports">Sports</Link>
+          <Link to="/sports">Sportsss</Link>
         </li>
        
         <li className={location.pathname === '/prayer' ? 'active' : ''}>
