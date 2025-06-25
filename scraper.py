@@ -5,7 +5,8 @@ import re
 import json
 from pymongo import MongoClient
 import certifi
-
+import os
+MONGO_URI = os.environ.get("MONGO_URI")
 
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 db = client['chfamma']
