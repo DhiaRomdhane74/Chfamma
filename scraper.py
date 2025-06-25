@@ -6,8 +6,11 @@ import json
 from pymongo import MongoClient
 import certifi
 import os
+MONGO_URI = os.environ.get("MONGO_URI")
+if not MONGO_URI:
+    print("[ERROR] MONGO_URI is not set!")
+    exit(1)
 
-MONGO_URI = "mongodb+srv://chfammauser:Dhia-romdhan5@cluster0.lc99sho.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 print("Scraper version 2 - THIS IS THE LATEST!")
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
