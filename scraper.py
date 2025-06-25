@@ -9,7 +9,7 @@ import os
 
 MONGO_URI = "mongodb+srv://chfammauser:Dhia-romdhan5@cluster0.lc99sho.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
-
+print("Scraper version 2 - THIS IS THE LATEST!")
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 db = client['chfamma']
 sports_collection = db['sports']
