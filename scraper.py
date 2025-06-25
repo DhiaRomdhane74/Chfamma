@@ -6,7 +6,8 @@ import json
 from pymongo import MongoClient
 import certifi
 import os
-MONGO_URI = os.environ.get("MONGO_URI")
+MONGO_URI = "mongodb+srv://chfammauser:Dhia-romdhan5@cluster0.lc99sho.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
 
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 db = client['chfamma']
