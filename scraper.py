@@ -6,6 +6,7 @@ import json
 from pymongo import MongoClient
 import certifi
 import os
+lmkhjjkj=jlkmjm
 MONGO_URI = "mongodb+srv://chfammauser:Dhia-romdhan5@cluster0.lc99sho.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 
