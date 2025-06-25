@@ -107,7 +107,7 @@ export default function Prayers() {
   }, []);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8001/scrape_prayers')
+    fetch('https://chfamma.onrender.com/scrape_prayers')
       .then(res => res.json())
       .then(data => setPrayerData(data.prayers || []))
       .catch(() => setPrayerData([]));
