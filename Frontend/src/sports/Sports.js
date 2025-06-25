@@ -122,7 +122,7 @@ export default function Sports() {
   // Fetch news only when switched to news tab
   const fetchNews = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8001/scrape_sport_news');
+      const response = await fetch('https://chfamma.onrender.com//scrape_sport_news');
       const data = await response.json();
       setNews(data.news || []);
     } catch {
