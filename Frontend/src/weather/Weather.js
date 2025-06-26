@@ -71,7 +71,7 @@ export default function Weather() {
   }, []);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8001/scrape_temperatures')
+    fetch('https://chfamma.onrender.com/scrape_temperatures')
       .then(res => res.json())
       .then(data => setTemps(data.temperatures || []));
   }, []);

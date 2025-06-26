@@ -99,7 +99,7 @@ export default function Sports() {
   useEffect(() => {
     async function fetchMatchesForRound(roundNumber) {
       try {
-        const response = await fetch('http://127.0.0.1:8001/matches_calendar');
+        const response = await fetch('https://chfamma.onrender.com/matches_calendar');
         const data = await response.json();
         const roundName = getRoundName(roundNumber);
         const roundMatches = (data.matches || []).filter(m => m.round === roundName);
@@ -131,7 +131,7 @@ export default function Sports() {
   
   const fetchNews = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8001/scrape_sport_news');
+      const response = await fetch('https://chfamma.onrender.com//scrape_sport_news');
       const data = await response.json();
       setNews(data.news || []);
     } catch {
