@@ -3,9 +3,9 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Navbar from './navbar/Navbar';
 import Weather from './weather/Weather';
-import Sports from './sports/Sports'; // Make sure you have this file!
+import Sports from './sports/Sports'; 
 import Prayers from './prayer/Prayers';
-// ...
+
 
 
 function App() {

@@ -16,6 +16,7 @@
   align-items: stretch;
   justify-content: center;
   overflow: hidden;
+  height: 100%;
 }
 
 .sports-table {
@@ -27,15 +28,42 @@
   min-width: 350px;
   display: flex;
   flex-direction: column;
-  height: auto;
-  max-height: 80vh;
-
+  height: 90%;
 }
 
-.sports-table h2 {
-  margin-top: 0;
+.sports-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
   margin-bottom: 1rem;
-  font-size: 2rem;
+}
+.sports-tabs button {
+  padding: 0.7rem 2rem;
+  font-weight: 600;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: #444;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+.sports-tabs button.tab-active {
+  color: #1976d2;
+  border-bottom: 3px solid #1976d2;
+}
+.round-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.round-selector select {
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 .table-scroll {
@@ -51,47 +79,180 @@
   background: #fff;
   table-layout: fixed;
   transition: background 0.3s;
+  min-width: 360px;
 }
-
-/* Card style for each row */
 .sports-table tbody tr {
   background: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   transition: box-shadow 0.2s;
 }
-
 .sports-table tbody tr:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.07);
 }
-
-/* Remove row border for a cleaner gap look */
-.sports-table th,
-.sports-table td {
+.sports-table th, .sports-table td {
   padding: 0.8rem 0.8rem;
   border-bottom: none;
   font-size: 1.08rem;
   text-align: left;
 }
-
-.sports-table th {
-  font-weight: bold;
-  background: #f8f8f8;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  height: 20px;
-}
-
-/* Only keep this if you want the entire "match" row centered */
 .sports-table td[colspan="4"] {
   text-align: center !important;
 }
+.news-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: #1976d2;
+}
+.news-desc {
+  font-size: 1rem;
+  color: #444;
+}
 
-.round-selector {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 1rem; /* add some space below if needed */
+
+.sports-switch-buttons {
+  display: none;
+  margin-bottom: 0.7rem;
+  gap: 0.5rem;
+}
+.sports-switch-buttons button {
+  background: #f3f3f3;
+  border: none;
+  padding: 0.55em 1.2em;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 0.3rem;
+  outline: none;
+}
+.sports-switch-buttons button.active {
+  background: #00967b;
+  color: white;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .sports-switch-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    background: #e8e8e8;
+    padding-bottom: 0.25rem;
+  }
+  .sports-section {
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    height: 100vh;
+    min-height: 0;
+  }
+  .sports-map,
+  .sports-table {
+    height: calc(100vh - 60px);
+    max-height: none;
+    min-height: 200px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .sports-table {
+    padding: 0.75rem 0.5rem;
+    min-width: 0;
+  }
+  .sports-table h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .sports-table th, .sports-table td {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.6rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+  }
+  .sports-table table {
+    min-width: 320px;
+  }
+  .sports-tabs button {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+  }
+  .round-selector select {
+    padding: 0.32rem 0.8rem;
+    font-size: 0.97rem;
+    border-radius: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sports-map,
+  .sports-table {
+    height: calc(100vh - 55px);
+    min-height: 140px;
+    border-radius: 8px;
+  }
+  .sports-table {
+    padding: 0.5rem 0.25rem;
+  }
+  .sports-table h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .sports-table th, .sports-table td {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.5rem;
+  }
+  .sports-table table {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .sports-map,
+  .sports-table {
+    height: calc(100vh - 50px);
+    min-height: 100px;
+  }
+  .sports-table h2 {
+    font-size: 1rem;
+  }
+  .sports-table th, .sports-table td {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.4rem;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .sports-section {
+    flex-direction: row;
+    height: 100vh;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  .sports-map {
+    flex: 1.5;
+    height: 100%;
+  }
+  .sports-table {
+    flex: 1;
+    height: 95%;
+    max-height: none;
+    min-width: 280px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .sports-section {
+    padding: 3rem;
+    gap: 3rem;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  .sports-table {
+    padding: 2.5rem 2rem;
+  }
 }

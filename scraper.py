@@ -114,9 +114,9 @@ def scrape_matches_calendar():
             "matches": matches_data
         }
 
-        # --- Save to MongoDB instead of file ---
-        sports_collection.delete_many({})   # Remove old matches (optional)
-        sports_collection.insert_one(data)  # Insert new document
+        
+        sports_collection.delete_many({})  
+        sports_collection.insert_one(data)  
 
         print("[INFO] Calendar data scraped and saved to MongoDB.")
         return data
@@ -160,8 +160,7 @@ def scrape_and_save_sports_news():
         descriptions = soup.find_all('p', class_='disc_ev')
 
         news_list = [{"title": t.text.strip(), "description": d.text.strip()} for t, d in zip(titles, descriptions)]
-        sports_collection.delete_many({'type': 'news'})  # Remove old sports news only
-
+        sports_collection.delete_many({'type': 'news'})  
         if news_list:
             for item in news_list:
                 item['type'] = 'news'
