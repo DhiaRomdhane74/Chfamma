@@ -27,7 +27,7 @@ function Navbar() {
           <Link to="/" onClick={handleNavClick}>Weather</Link>
         </li>
         <li className={location.pathname === '/sports' ? 'active' : ''}>
-          <Link to="/sports" onClick={handleNavClick}>Sportsss</Link>
+          <Link to="/sports" onClick={handleNavClick}>Sports</Link>
         </li>
         <li className={location.pathname === '/prayer' ? 'active' : ''}>
           <Link to="/prayer" onClick={handleNavClick}>Prayer</Link>
