@@ -21,7 +21,9 @@ const teams_stadiums_locs = {
   'Etoile Sahel': [35.823670, 10.612751],
   'Ben Guerdane': [33.152800, 11.206277],
   'Monastir': [35.336493, 10.819967],
-  'Cs Sfaxien': [34.733881, 10.480000]
+  'Cs Sfaxien': [34.733881, 10.480000],
+  'Kairouan': [35.6859755855156, 10.073384692403023],
+  'Marsa': [36.87521415333228, 10.319931913493779]
 };
 
 
@@ -42,7 +44,8 @@ const teamLogos = {
   'Ben Guerdane': 'logos/Ben Guerdane.png',
   'Monastir': 'logos/Monastir.png',
   'Cs Sfaxien': 'logos/CS Sfaxien.png',
-  'Kairouan': 'logos/Jeunesse_sportive_kairouanaise.png'
+  'Kairouan': 'logos/Jeunesse_sportive_kairouanaise.png',
+  'Marsa': 'logos/Marsa.png'
 };
 
 
