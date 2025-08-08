@@ -45,7 +45,7 @@ const teamLogos = {
   'Monastir': 'logos/Monastir.png',
   'Cs Sfaxien': 'logos/CS Sfaxien.png',
   'Kairouan': 'logos/Jeunesse_sportive_kairouanaise.png',
-  'Marsa': 'logos/Marsa.png'
+  'Marsa': 'Frontend/public/Marsa.png'
 };
 
 
