@@ -283,3 +283,12 @@
     padding-bottom: 0.25rem;
   }
 }
+.leaflet-popup-content table th,
+.leaflet-popup-content table td {
+  padding: 4px 16px; 
+  text-align: left;
+}
+.leaflet-popup-content table {
+  margin-left: 0;
+  text-align: left;
+}

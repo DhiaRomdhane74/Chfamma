@@ -45,7 +45,7 @@ const teamLogos = {
   'Monastir': 'logos/Monastir.png',
   'Cs Sfaxien': 'logos/CS Sfaxien.png',
   'Kairouan': 'logos/Jeunesse_sportive_kairouanaise.png',
-  'Marsa': 'Frontend/public/Marsa.png'
+  'Marsa': 'logos/Marsa.png'
 };
 
 
@@ -81,7 +81,7 @@ export default function Sports() {
   const [geojson, setGeojson] = useState(null);
   const [selectedRound, setSelectedRound] = useState(1);
   const [matches, setMatches] = useState(Array(8).fill({}));
-  const [view, setView] = useState('results'); // 'results' or 'news'
+  const [view, setView] = useState('results'); 
   const [news, setNews] = useState([]);
   const [activeView, setActiveView] = useState("map");
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);

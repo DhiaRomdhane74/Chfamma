@@ -6,12 +6,15 @@ function Navbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
-
   const handleNavClick = () => setMenuOpen(false);
 
   return (
     <nav className="navbar">
-      <div className="logo">Chfamma?</div>
+      
+      <Link to="/" className="logo" onClick={handleNavClick}>
+        Chfamma?
+      </Link>
+      
       
       <button
         className={`navbar-toggle${menuOpen ? ' open' : ''}`}
@@ -22,6 +25,7 @@ function Navbar() {
         <span className="bar"></span>
         <span className="bar"></span>
       </button>
+
       <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
         <li className={location.pathname === '/' ? 'active' : ''}>
           <Link to="/" onClick={handleNavClick}>Weather</Link>
