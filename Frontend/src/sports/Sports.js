@@ -41,7 +41,8 @@ const teamLogos = {
   'Etoile Sahel': 'logos/Etoile Sahel.png',
   'Ben Guerdane': 'logos/Ben Guerdane.png',
   'Monastir': 'logos/Monastir.png',
-  'Cs Sfaxien': 'logos/CS Sfaxien.png'
+  'Cs Sfaxien': 'logos/CS Sfaxien.png',
+  'Kairouan': 'logos/Jeunesse_sportive_kairouanaise.png'
 };
 
 
